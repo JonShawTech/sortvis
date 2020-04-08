@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sortvis/static/css/main.7ee6ea72.chunk.css",
+    "main.css": "/sortvis/static/css/main.7aa6581a.chunk.css",
     "main.js": "/sortvis/static/js/main.bb2e6f06.chunk.js",
     "main.js.map": "/sortvis/static/js/main.bb2e6f06.chunk.js.map",
     "runtime-main.js": "/sortvis/static/js/runtime-main.8283f3e7.js",
@@ -8,15 +8,15 @@
     "static/js/2.4457f36e.chunk.js": "/sortvis/static/js/2.4457f36e.chunk.js",
     "static/js/2.4457f36e.chunk.js.map": "/sortvis/static/js/2.4457f36e.chunk.js.map",
     "index.html": "/sortvis/index.html",
-    "precache-manifest.e00a7b372d19fc9a246ae8f6ab42d84d.js": "/sortvis/precache-manifest.e00a7b372d19fc9a246ae8f6ab42d84d.js",
+    "precache-manifest.8964b9fc9d03ca62cd68e1e6f3040b41.js": "/sortvis/precache-manifest.8964b9fc9d03ca62cd68e1e6f3040b41.js",
     "service-worker.js": "/sortvis/service-worker.js",
-    "static/css/main.7ee6ea72.chunk.css.map": "/sortvis/static/css/main.7ee6ea72.chunk.css.map",
+    "static/css/main.7aa6581a.chunk.css.map": "/sortvis/static/css/main.7aa6581a.chunk.css.map",
     "static/js/2.4457f36e.chunk.js.LICENSE.txt": "/sortvis/static/js/2.4457f36e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8283f3e7.js",
     "static/js/2.4457f36e.chunk.js",
-    "static/css/main.7ee6ea72.chunk.css",
+    "static/css/main.7aa6581a.chunk.css",
     "static/js/main.bb2e6f06.chunk.js"
   ]
 }
