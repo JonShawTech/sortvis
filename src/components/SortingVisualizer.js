@@ -6,32 +6,41 @@ import '../App.css'
 export default class SortingVisualizer extends React.Component {
 
     constructor(props) {
-        super(props);
+        super(props);       
     
         this.state = {
-          array: [],
+          array: []         
         };
       }
     
       componentDidMount() {
+        
         this.createArray();
       }
-      createArray() {
-        const newArr = [];
+      createArray() {   
+       
+        const newArr = [];        
         for (let i = 0; i < 150; i++) {
-          newArr.push(Math.floor(Math.random() * 450) + 5);
+          newArr.push(Math.floor(Math.random() * 450) + 5);         
+          
         }
-        this.setState({ array: newArr });
-        console.log("newArry = " + newArr);
+        this.setState({ array: newArr });      
       }
+    
 
-      
 selectionSort (arr) {
+  const arrayBars = document.getElementsByClassName('arrayBar');
+  const color = "#00FF00";
+  let sortedValue = 0;
     let len = arr.length;
     for (let i = 0; i < len; i++) {
+      const barOneStyle = arrayBars[i].style;
+      
       let min = i;
       setTimeout(() => {
-        for (let j = i + 1; j < len; j++) {
+        for (let j = i + 1; j <= len; j++) {
+          barOneStyle.backgroundColor = color;
+          sortedValue++;
             
           if (arr[min] > arr[j]) {
             min = j;
@@ -53,102 +62,87 @@ selectionSort (arr) {
   };
 
 bubbleSort(inputArr)  {
+
+
+  const arrayBars = document.getElementsByClassName('arrayBar');
+
+  const green = "#00FF00";
+  const red = "rgb(255,0,0)"
+  
+  let sortedValue = inputArr.length;  
     
     let len = inputArr.length;
     for (let i = 0; i < len; i++) {
+      sortedValue--;
       
-        for (let j = 0; j < len; j++) {
+      const sortedBarStyle = arrayBars[sortedValue].style;
+
+   
+      
+        for (let j = 0; j <= len; j++) {
             setTimeout(() => {
+              sortedBarStyle.backgroundColor = green;
+            
           if (inputArr[j] > inputArr[j + 1]) {
-            let tmp = inputArr[j];
+            let tmp = inputArr[j];    
+            
+            
             inputArr[j] = inputArr[j + 1];
+
             inputArr[j + 1] = tmp;
+           
+        
+         
             this.setState({ array: inputArr });
           }
         
-      }, i * 300);
+      }, i * 200);
     }
     }
   };
 
 insertionSort (inputArr) {
     let length = inputArr.length;
+    
+    const arrayBars = document.getElementsByClassName('arrayBar');
+    const color = "#00FF00";
+    let sortedValue = 0;
+    
 
-    for (let i = 1; i < length; i++) {
+    for (let i = 1; i <= length; i++) {
+      const barOneStyle = arrayBars[sortedValue].style;
+      sortedValue++;
+      console.log(sortedValue)
       setTimeout(() => {
+        barOneStyle.backgroundColor = color;
+        
         let key = inputArr[i];
         let j = i - 1;
         while (j >= 0 && inputArr[j] > key) {
+          
+        
           inputArr[j + 1] = inputArr[j];
           j = j - 1;
+          barOneStyle.backgroundColor = color;
         }
         inputArr[j + 1] = key;
-
+        
         this.setState({ array: inputArr });
       }, i * 100);
     }
   };
 
- quickSort(arr, left = 0, right = arr.length - 1) {
-     
-    let len = arr.length,
-      index;
-      setTimeout(() => {
-      if (len > 1) {
-        index = this.partition(arr, left, right);
 
-        if (left < index - 1) {
-          this.quickSort(arr, left, index - 1);
-        }
-
-        if (index < right) {
-          this.quickSort(arr, index, right);
-        }
-      }
-
-      this.setState({ array: arr });
-    },  300);
-  }
-
-partition(arr, left, right) {
-    let middle = Math.floor((right + left) / 2),
-      pivot = arr[middle],
-      i = left,
-      j = right;
-
-    while (i <= j) {
-      while (arr[i] < pivot) {
-        i++;
-      }
-
-      while (arr[j] > pivot) {
-        j--;
-      }
-
-      if (i <= j) {
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-        i++;
-        j--;
-      }
-    }
-    
-    return i;
-  }
-
-swap(arr, i, j) {
-    var temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-  }
 
       render() {
-        const { array } = this.state;
+      //  const { array } = this.state;
         return (
           <div>
             <div>
-              <button className="btn" onClick={() => this.createArray()}>
+              {/* <button className="btn" onClick={() => this.createArray()}>
                 New Array
-              </button>
+              </button> */}
+              <button className="btn" onClick={() => window.location.reload(false)}>New Array</button>
               <button className="btn" onClick={() => this.bubbleSort(this.state.array)}>
                 Bubble Sort
               </button>
@@ -164,20 +158,16 @@ swap(arr, i, j) {
               >
                 Insertion Sort
               </button>
-    
-              <button
-                className="btn"
-                onClick={() => this.quickSort(this.state.array)}
-              >
-                Quick sort
-              </button>
+
+              
+
             </div>
             <div className="arrayContainer">
-              {array.map((value, idx) => (
+              {this.state.array.map((value, idx) => (
                 <div
                   className="arrayBar"
                   key={idx}
-                  style={{ height: `${value}px` }}
+                  style={{ height: `${value}px`, backgroundColor: 'rgb(55, 192, 238)'}}
                 ></div>
               ))}
             </div>

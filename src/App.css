@@ -40,6 +40,21 @@
   }
 }
 
+
+:root {
+
+
+  --abw: 5px;
+}
+
+@media (min-width: 1200px) {
+  .arrayBar {
+    --abw: 10px;
+      }
+}
+
+
+
 .arrayContainer {
   position: absolute;
   top: 20%;
@@ -65,8 +80,8 @@ body {
 
 
 .arrayBar {
-  width: 5px;
- background-color: rgb(55, 192, 238);
+  width: var(--abw);
+ /* background-color: rgb(55, 192, 238); */
  display: inline-block;
  margin: 0 1px;
 
