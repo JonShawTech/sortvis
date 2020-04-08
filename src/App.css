@@ -47,7 +47,7 @@
   --abw: 5px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
   .arrayBar {
     --abw: 10px;
       }
