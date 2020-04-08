@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a39502b7daee6a13faf43a3b77cf13c5",
+    "revision": "1e9c268db01d807e69e95f1ae2f53d31",
     "url": "/sortvis/index.html"
   },
   {
-    "revision": "a4697f4cfce36184855c",
-    "url": "/sortvis/static/css/main.c1b4396a.chunk.css"
+    "revision": "7a6dbd4b2aa6cee417b0",
+    "url": "/sortvis/static/css/main.7ee6ea72.chunk.css"
   },
   {
     "revision": "18020f4ed41b1f242ab1",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sortvis/static/js/2.4457f36e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a4697f4cfce36184855c",
-    "url": "/sortvis/static/js/main.65fe858f.chunk.js"
+    "revision": "7a6dbd4b2aa6cee417b0",
+    "url": "/sortvis/static/js/main.bb2e6f06.chunk.js"
   },
   {
     "revision": "b1842f5fab79fe9b039d",
