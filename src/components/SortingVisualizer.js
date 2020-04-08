@@ -19,7 +19,7 @@ export default class SortingVisualizer extends React.Component {
       createArray() {
         const newArr = [];
         for (let i = 0; i < 150; i++) {
-          newArr.push(Math.floor(Math.random() * 750) + 5);
+          newArr.push(Math.floor(Math.random() * 450) + 5);
         }
         this.setState({ array: newArr });
         console.log("newArry = " + newArr);
